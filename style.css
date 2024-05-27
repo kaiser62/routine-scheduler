@@ -6,12 +6,7 @@ body {
 }
 
 header {
-    background-color: #282c34;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1em 0;
 }
 
 header h1 {
@@ -19,38 +14,12 @@ header h1 {
 }
 
 #date-day {
-    background-color: white;
-    color: black;
     padding: 0.5em;
     border: none;
-}
-
-#admin-login {
-    padding: 0.5em 1em;
-    background-color: #61dafb;
-    border: none;
-    color: black;
-    cursor: pointer;
-}
-
-#admin-login:hover {
-    background-color: #21a1f1;
 }
 
 main {
-    padding: 2em;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1em;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 0.5em;
-    text-align: left;
+    padding: 2em 0;
 }
 
 .editable {
@@ -58,34 +27,8 @@ th, td {
 }
 
 #admin-panel {
-    padding: 2em;
+    padding: 2em 0;
     background-color: #fff;
-    margin: 2em 0;
     border: 1px solid #ddd;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 0.5em;
-}
-
-form input {
-    padding: 0.5em;
-    margin-top: 0.2em;
-}
-
-form button {
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    background-color: #61dafb;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #21a1f1;
+    margin-top: 2em;
 }
