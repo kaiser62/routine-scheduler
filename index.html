@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Routine Scheduler</h1>
+        <div id="date-day" contenteditable="true">Date and Day</div>
+        <button id="admin-login">Admin Login</button>
+    </header>
+    <main>
+        <table id="routine-table">
+            <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Teacher</th>
+                <th>Designation</th>
+                <th>Topic</th>
+            </tr>
+            <tr data-time="7am">
+                <td>7am</td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+            </tr>
+            <tr data-time="8am">
+                <td>8am</td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+            </tr>
+            <tr data-time="11:30am">
+                <td>11:30am</td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+            </tr>
+            <tr data-time="12:30pm">
+                <td>12:30pm</td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+            </tr>
+            <tr data-time="1:30pm">
+                <td>1:30pm</td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+                <td class="editable" contenteditable="true"></td>
+            </tr>
+        </table>
+    </main>
+    <div id="admin-panel" style="display:none;">
+        <h2>Admin Panel</h2>
+        <form id="teacher-form">
+            <h3>Add Teacher</h3>
+            <label for="teacher-name">Name:</label>
+            <input type="text" id="teacher-name" required>
+            <label for="teacher-designation">Designation:</label>
+            <input type="text" id="teacher-designation" required>
+            <label for="teacher-subject">Subject:</label>
+            <input type="text" id="teacher-subject" required>
+            <button type="submit">Add Teacher</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
