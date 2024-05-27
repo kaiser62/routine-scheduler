@@ -4,73 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Routine Scheduler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Routine Scheduler</h1>
-        <div id="date-day" contenteditable="true">Date and Day</div>
-        <button id="admin-login">Admin Login</button>
+    <header class="teal lighten-2">
+        <div class="container">
+            <h1 class="white-text">Routine Scheduler</h1>
+            <div id="date-day" class="white-text" contenteditable="true">Date and Day</div>
+            <button id="admin-login" class="btn white teal-text">Admin Login</button>
+        </div>
     </header>
-    <main>
-        <table id="routine-table">
-            <tr>
-                <th>Time</th>
-                <th>Subject</th>
-                <th>Teacher</th>
-                <th>Designation</th>
-                <th>Topic</th>
-            </tr>
-            <tr data-time="7am">
-                <td>7am</td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-            </tr>
-            <tr data-time="8am">
-                <td>8am</td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-            </tr>
-            <tr data-time="11:30am">
-                <td>11:30am</td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-            </tr>
-            <tr data-time="12:30pm">
-                <td>12:30pm</td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-            </tr>
-            <tr data-time="1:30pm">
-                <td>1:30pm</td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-                <td class="editable" contenteditable="true"></td>
-            </tr>
+    <main class="container">
+        <table id="routine-table" class="striped">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                    <th>Teacher</th>
+                    <th>Designation</th>
+                    <th>Topic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-time="7am">
+                    <td>7am</td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                </tr>
+                <tr data-time="8am">
+                    <td>8am</td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                </tr>
+                <tr data-time="11:30am">
+                    <td>11:30am</td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                </tr>
+                <tr data-time="12:30pm">
+                    <td>12:30pm</td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                </tr>
+                <tr data-time="1:30pm">
+                    <td>1:30pm</td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                    <td class="editable" contenteditable="false"></td>
+                </tr>
+            </tbody>
         </table>
     </main>
-    <div id="admin-panel" style="display:none;">
-        <h2>Admin Panel</h2>
-        <form id="teacher-form">
-            <h3>Add Teacher</h3>
-            <label for="teacher-name">Name:</label>
-            <input type="text" id="teacher-name" required>
-            <label for="teacher-designation">Designation:</label>
-            <input type="text" id="teacher-designation" required>
-            <label for="teacher-subject">Subject:</label>
-            <input type="text" id="teacher-subject" required>
-            <button type="submit">Add Teacher</button>
+    <div id="admin-panel" class="container" style="display:none;">
+        <h2>Add Teacher</h2>
+        <form id="teacher-form" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <input id="teacher-name" type="text" class="validate" required>
+                    <label for="teacher-name">Name</label>
+                </div>
+                <div class="input-field col s4">
+                    <input id="teacher-designation" type="text" class="validate" required>
+                    <label for="teacher-designation">Designation</label>
+                </div>
+                <div class="input-field col s4">
+                    <input id="teacher-subject" type="text" class="validate" required>
+                    <label for="teacher-subject">Subject</label>
+                </div>
+            </div>
+            <button type="submit" class="btn teal">Add Teacher</button>
         </form>
     </div>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h4>Admin Login</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="admin-username" type="text" class="validate">
+                            <label for="admin-username">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="admin-password" type="password" class="validate">
+                            <label for="admin-password">Password</label>
+                        </div>
+                    </div>
+                    <button id="login-button" class="btn teal">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
